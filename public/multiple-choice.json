@@ -238,5 +238,125 @@
         "question": "What percentage represents electrical systems in total retrofit costs?",
         "options": ["$180-280 per sq ft", "$280-460 per sq ft", "$380-560 per sq ft", "$480-660 per sq ft"],
         "correctIndex": 1
+    },
+    {
+        "id": 41,
+        "question": "What does CPM stand for in project management?",
+        "options": ["Cost Performance Method", "Critical Path Method", "Construction Planning Model", "Contractor Performance Metrics"],
+        "correctIndex": 1
+    },
+    {
+        "id": 42,
+        "question": "In a project network, what is float?",
+        "options": ["The amount of time an activity can be delayed without delaying the project", "The total duration of the project", "The cost buffer for activities", "The quality variance allowance"],
+        "correctIndex": 0
+    },
+    {
+        "id": 43,
+        "question": "What is the main difference between fast tracking and crashing?",
+        "options": ["Fast tracking adds resources, crashing overlaps activities", "Fast tracking overlaps activities, crashing adds resources", "Fast tracking reduces scope, crashing maintains scope", "No difference, they are the same technique"],
+        "correctIndex": 1
+    },
+    {
+        "id": 44,
+        "question": "In a GMP contract, who bears the risk if actual costs exceed the guaranteed maximum price?",
+        "options": ["Owner", "Contractor", "Shared equally", "Insurance company"],
+        "correctIndex": 1
+    },
+    {
+        "id": 45,
+        "question": "What is the main advantage of a Cost Plus contract?",
+        "options": ["Price certainty for owner", "Maximum flexibility for scope changes", "Lowest administrative burden", "Fastest procurement process"],
+        "correctIndex": 1
+    },
+    {
+        "id": 46,
+        "question": "In which contract type does the owner have the most cost risk?",
+        "options": ["Lump Sum", "GMP", "Cost Plus", "Unit Price"],
+        "correctIndex": 2
+    },
+    {
+        "id": 47,
+        "question": "What is the purpose of a baseline schedule?",
+        "options": ["Initial schedule before any updates", "Schedule used for performance measurement", "Final approved schedule", "Schedule with maximum float"],
+        "correctIndex": 1
+    },
+    {
+        "id": 48,
+        "question": "Which type of dependency is most common in construction sequencing?",
+        "options": ["Start-to-Start (SS)", "Finish-to-Start (FS)", "Start-to-Finish (SF)", "Finish-to-Finish (FF)"],
+        "correctIndex": 1
+    },
+    {
+        "id": 49,
+        "question": "What does a negative float indicate?",
+        "options": ["Extra time available", "Project is ahead of schedule", "Activity is behind schedule/project delay", "Resource over-allocation"],
+        "correctIndex": 2
+    },
+    {
+        "id": 50,
+        "question": "In Earned Value Management, what does CPI measure?",
+        "options": ["Schedule performance", "Cost performance efficiency", "Quality metrics", "Resource utilization"],
+        "correctIndex": 1
+    },
+    {
+        "id": 51,
+        "question": "What is the formula for Schedule Variance (SV)?",
+        "options": ["SV = EV - PV", "SV = EV - AC", "SV = PV - AC", "SV = AC - EV"],
+        "correctIndex": 0
+    },
+    {
+        "id": 52,
+        "question": "Which project phase typically has the highest cost of changes?",
+        "options": ["Initiation", "Planning", "Execution", "Closeout"],
+        "correctIndex": 2
+    },
+    {
+        "id": 53,
+        "question": "What is resource leveling primarily used for?",
+        "options": ["Reducing project duration", "Smoothing resource demand", "Increasing project budget", "Improving quality"],
+        "correctIndex": 1
+    },
+    {
+        "id": 54,
+        "question": "In a Work Breakdown Structure (WBS), what is the 100% rule?",
+        "options": ["All work must be 100% complete", "WBS must account for 100% of project scope", "Each task must be 100% defined", "Budget must be 100% allocated"],
+        "correctIndex": 1
+    },
+    {
+        "id": 55,
+        "question": "What is the primary purpose of a project charter?",
+        "options": ["Detailed project schedule", "Formal project authorization", "Budget breakdown", "Risk assessment"],
+        "correctIndex": 1
+    },
+    {
+        "id": 56,
+        "question": "Which contract type provides the most incentive for contractor efficiency?",
+        "options": ["Cost Plus Fixed Fee", "Cost Plus Incentive Fee", "Lump Sum", "Time and Materials"],
+        "correctIndex": 2
+    },
+    {
+        "id": 57,
+        "question": "What is the main risk of fast tracking a project?",
+        "options": ["Increased costs", "Reduced quality", "Increased rework due to design changes", "Resource conflicts"],
+        "correctIndex": 2
+    },
+    {
+        "id": 58,
+        "question": "In project communications, what is the formula for communication channels?",
+        "options": ["n(n-1)", "n(n-1)/2", "n²", "2n-1"],
+        "correctIndex": 1
+    },
+    {
+        "id": 59,
+        "question": "What is the difference between lag and lead time?",
+        "options": ["Lag adds delay, lead adds overlap", "Lag adds overlap, lead adds delay", "No difference", "Lag is positive, lead is negative"],
+        "correctIndex": 0
+    },
+    {
+        "id": 60,
+        "question": "Which document formally closes out a construction project?",
+        "options": ["Final invoice", "Certificate of substantial completion", "Project charter", "Lessons learned report"],
+        "correctIndex": 1
     }
 ] 
