@@ -23,6 +23,11 @@
     --radius-md: 12px;
     --radius-lg: 16px;
     --radius-pill: 25px;
+    
+    /* Font Weight System */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
 }
 
 * {
@@ -65,7 +70,7 @@ body {
 /* Typography */
 h1 {
     font-size: var(--font-size-large);
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     text-align: center;
     margin-bottom: var(--spacing-xl);
 }
@@ -104,7 +109,7 @@ p {
 
 .counter {
     font-size: var(--font-size-base);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     color: var(--text-secondary);
     text-align: center;
 }
@@ -119,7 +124,7 @@ p {
 
 .study-card {
     background-color: var(--background-primary);
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -132,7 +137,7 @@ p {
 
 .study-card-title {
     font-size: var(--font-size-large);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     text-align: center;
     margin-bottom: var(--spacing-sm);
     color: var(--text-primary);
@@ -148,7 +153,7 @@ p {
     border: none;
     padding: var(--spacing-xs) var(--spacing-md);
     font-size: var(--font-size-base);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -164,7 +169,7 @@ p {
 .study-card-btn:last-child {
     background-color: var(--background-primary);
     color: var(--text-primary);
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .study-card-btn:first-child:hover {
@@ -184,7 +189,7 @@ p {
 
 .reset-btn {
     background: none;
-    border: 2px solid var(--text-secondary);
+    border: 1px solid var(--text-secondary);
     color: var(--text-secondary);
     padding: var(--spacing-sm) var(--spacing-lg);
     font-size: var(--font-size-base);
@@ -236,7 +241,7 @@ p {
 .flashcard-front {
     background-color: var(--background-primary);
     color: var(--text-primary);
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .flashcard-back {
@@ -273,7 +278,7 @@ p {
     border: none;
     padding: var(--spacing-xs) var(--spacing-md);
     font-size: var(--font-size-base);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     border-radius: var(--radius-pill);
     cursor: pointer;
     transition: transform 0.2s ease, opacity 0.2s ease;
@@ -323,7 +328,7 @@ p {
 .option-btn {
     background-color: var(--background-primary);
     color: var(--text-primary);
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     padding: var(--spacing-sm) var(--spacing-lg);
     font-size: var(--font-size-base);
     border-radius: var(--radius-md);
@@ -371,7 +376,7 @@ p {
     border: none;
     padding: var(--spacing-sm) var(--spacing-lg);
     font-size: var(--font-size-base);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: all 0.2s ease;
