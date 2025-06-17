@@ -1,0 +1,20 @@
+{
+  "name": "ai-datacenter-study-guide",
+  "version": "1.0.0",
+  "description": "AI Data Center Study Guide - Flashcards and Multiple Choice Questions",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "start": "python3 -m http.server 8080",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "ai",
+    "data-center",
+    "study-guide",
+    "flashcards",
+    "education"
+  ],
+  "author": "AI Data Center Study Guide",
+  "license": "MIT"
+} 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen active">
+        <div class="container">
+            <h1>Study Guide</h1>
+            <div class="study-options">
+                <button class="study-btn" onclick="startStudy('flashcards', 'all')">
+                    Flashcards (All)
+                </button>
+                <button class="study-btn" onclick="startStudy('flashcards', 'active')">
+                    Flashcards (Active)
+                </button>
+                <button class="study-btn" onclick="startStudy('multiple-choice', 'all')">
+                    Multiple Choice (All)
+                </button>
+                <button class="study-btn" onclick="startStudy('multiple-choice', 'active')">
+                    Multiple Choice (Active)
+                </button>
+            </div>
+            <button class="reset-btn" onclick="resetProgress()">
+                Reset Progress
+            </button>
+        </div>
+    </div>
+
+    <!-- Flashcard Screen -->
+    <div id="flashcard-screen" class="screen">
+        <div class="header">
+            <button class="home-btn" onclick="goHome()">←</button>
+            <div class="counter" id="flashcard-counter">1 of 8</div>
+            <button class="complete-btn" onclick="markComplete()">✓</button>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="flipCard()">
+                <div class="flashcard-front">
+                    <p id="flashcard-question"></p>
+                </div>
+                <div class="flashcard-back">
+                    <p id="flashcard-answer"></p>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard-controls">
+            <button class="nav-btn prev-btn" onclick="previousCard()">Previous</button>
+            <button class="nav-btn next-btn" onclick="nextCard()">Next</button>
+        </div>
+    </div>
+
+    <!-- Multiple Choice Screen -->
+    <div id="multiple-choice-screen" class="screen">
+        <div class="header">
+            <button class="home-btn" onclick="goHome()">←</button>
+            <div class="counter" id="mc-counter">1 of 8</div>
+            <button class="complete-btn" onclick="markComplete()">✓</button>
+        </div>
+        <div class="container">
+            <div class="question-container">
+                <p id="mc-question"></p>
+            </div>
+            <div class="options-container" id="mc-options">
+                <!-- Options will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
