@@ -648,5 +648,155 @@
         "id": 130,
         "front": "What is Ultra Ethernet and why is it important for AI?",
         "back": "Combines traditional Ethernet with InfiniBand-like features optimized for AI workloads"
+    },
+    {
+        "id": 131,
+        "front": "What does CPM stand for in construction scheduling?",
+        "back": "Critical Path Method - scheduling technique that identifies the longest sequence of dependent activities"
+    },
+    {
+        "id": 132,
+        "front": "What is the critical path in a construction schedule?",
+        "back": "The longest sequence of activities that determines the minimum project duration"
+    },
+    {
+        "id": 133,
+        "front": "What is float or slack in project scheduling?",
+        "back": "Amount of time an activity can be delayed without delaying the project completion"
+    },
+    {
+        "id": 134,
+        "front": "What is the difference between total float and free float?",
+        "back": "Total float affects project completion, free float only affects successor activities"
+    },
+    {
+        "id": 135,
+        "front": "What is fast tracking in schedule compression?",
+        "back": "Overlapping activities that were originally planned in sequence to compress schedule"
+    },
+    {
+        "id": 136,
+        "front": "What is crashing in schedule compression?",
+        "back": "Adding resources to critical path activities to reduce their duration"
+    },
+    {
+        "id": 137,
+        "front": "What are the key components of a Gantt chart?",
+        "back": "Tasks, durations, dependencies, resources, timeline, milestones, and progress tracking"
+    },
+    {
+        "id": 138,
+        "front": "What is resource leveling in project scheduling?",
+        "back": "Smoothing resource demand to avoid over-allocation while maintaining critical path"
+    },
+    {
+        "id": 139,
+        "front": "What is the difference between lag and lead time?",
+        "back": "Lag adds delay between activities, lead allows successor to start before predecessor finishes"
+    },
+    {
+        "id": 140,
+        "front": "What are the four types of task dependencies?",
+        "back": "Finish-to-Start (FS), Start-to-Start (SS), Finish-to-Finish (FF), Start-to-Finish (SF)"
+    },
+    {
+        "id": 141,
+        "front": "What is a milestone in project scheduling?",
+        "back": "Significant project event or deliverable with zero duration marking key completion points"
+    },
+    {
+        "id": 142,
+        "front": "What is the difference between duration and work in scheduling?",
+        "back": "Duration is elapsed time, work is effort hours required to complete the task"
+    },
+    {
+        "id": 143,
+        "front": "What is baseline schedule and why is it important?",
+        "back": "Original approved schedule used for performance measurement and change control"
+    },
+    {
+        "id": 144,
+        "front": "What are common schedule risks in data center construction?",
+        "back": "Long-lead equipment procurement, utility delays, weather, permit approvals, design changes"
+    },
+    {
+        "id": 145,
+        "front": "How do you calculate schedule variance (SV)?",
+        "back": "SV = Earned Value (EV) - Planned Value (PV)"
+    },
+    {
+        "id": 146,
+        "front": "What are the five phases of project management lifecycle?",
+        "back": "Initiation, Planning, Execution, Monitoring & Controlling, Closeout"
+    },
+    {
+        "id": 147,
+        "front": "What is the project management triangle (triple constraint)?",
+        "back": "Scope, Time, and Cost - changing one affects the others"
+    },
+    {
+        "id": 148,
+        "front": "What does EVM stand for and what does it measure?",
+        "back": "Earned Value Management - measures project performance against scope, schedule, and cost"
+    },
+    {
+        "id": 149,
+        "front": "What is the difference between proactive and reactive risk management?",
+        "back": "Proactive identifies and prevents risks, reactive responds after risks occur"
+    },
+    {
+        "id": 150,
+        "front": "What are the key elements of a project charter?",
+        "back": "Project authorization, objectives, scope, stakeholders, success criteria, constraints"
+    },
+    {
+        "id": 151,
+        "front": "What is the difference between quality assurance and quality control?",
+        "back": "QA prevents defects through process, QC detects defects through inspection"
+    },
+    {
+        "id": 152,
+        "front": "What is a work breakdown structure (WBS)?",
+        "back": "Hierarchical breakdown of project deliverables and work packages"
+    },
+    {
+        "id": 153,
+        "front": "What is the purpose of a project kickoff meeting?",
+        "back": "Align team on objectives, scope, roles, communication, and project approach"
+    },
+    {
+        "id": 154,
+        "front": "What are the key components of project communication management?",
+        "back": "Stakeholder identification, communication planning, information distribution, reporting"
+    },
+    {
+        "id": 155,
+        "front": "What is change control process in construction projects?",
+        "back": "Formal procedure for requesting, evaluating, approving, and implementing changes"
+    },
+    {
+        "id": 156,
+        "front": "What is the difference between functional and matrix organization structures?",
+        "back": "Functional has clear hierarchy, matrix has dual reporting relationships"
+    },
+    {
+        "id": 157,
+        "front": "What are the key elements of project closeout?",
+        "back": "Final deliverables, documentation, lessons learned, contract closure, team release"
+    },
+    {
+        "id": 158,
+        "front": "What is value engineering and when is it most effective?",
+        "back": "Systematic review to optimize cost, function, and quality - most effective in design phase"
+    },
+    {
+        "id": 159,
+        "front": "What are the key performance indicators (KPIs) for construction projects?",
+        "back": "Schedule performance, cost performance, quality metrics, safety indicators, stakeholder satisfaction"
+    },
+    {
+        "id": 160,
+        "front": "What is the difference between scope creep and scope change?",
+        "back": "Scope creep is uncontrolled expansion, scope change is formal approved modification"
     }
 ] 
