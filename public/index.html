@@ -24,6 +24,12 @@
                 <button class="study-btn" onclick="startStudy('multiple-choice', 'active')">
                     Multiple Choice (Active)
                 </button>
+                <button class="study-btn" onclick="startStudy('long-form', 'all')">
+                    Long Form Questions (All)
+                </button>
+                <button class="study-btn" onclick="startStudy('long-form', 'active')">
+                    Long Form Questions (Active)
+                </button>
             </div>
             <button class="reset-btn" onclick="resetProgress()">
                 Reset Progress
@@ -68,6 +74,30 @@
             <div class="options-container" id="mc-options">
                 <!-- Options will be populated by JavaScript -->
             </div>
+        </div>
+    </div>
+
+    <!-- Long Form Screen -->
+    <div id="long-form-screen" class="screen">
+        <div class="header">
+            <button class="home-btn" onclick="goHome()">←</button>
+            <div class="counter" id="lf-counter">1 of 1</div>
+            <button class="complete-btn" onclick="markComplete()">✓</button>
+        </div>
+        <div class="container">
+            <div class="long-form-question-container">
+                <p id="lf-question"></p>
+            </div>
+            <div class="long-form-answer-container">
+                <button class="show-answer-btn" id="show-answer-btn" onclick="showAnswer()">Show Answer</button>
+                <div class="long-form-answer" id="lf-answer" style="display: none;">
+                    <p id="lf-answer-text"></p>
+                </div>
+            </div>
+        </div>
+        <div class="long-form-controls">
+            <button class="nav-btn prev-btn" onclick="previousLongForm()">Previous</button>
+            <button class="nav-btn next-btn" onclick="nextLongForm()">Next</button>
         </div>
     </div>
 

@@ -1,0 +1,7 @@
+[
+    {
+        "id": 1,
+        "question": "Explain the difference between GMP, Lump Sum, and Cost Plus contracts. In what situations would you recommend each for a data center project?",
+        "answer": "Each contract type shifts risk differently between owner and contractor. Lump Sum transfers maximum risk to the contractor but requires complete design - use when scope is 100% defined and you want cost certainty. GMP balances risk sharing with cost control, allowing early contractor involvement while capping exposure - perfect for data centers where MEP coordination is critical but scope may evolve. Cost Plus keeps risk with the owner but provides maximum flexibility - only use when schedule is more critical than cost certainty, like emergency projects. The key is matching contract type to project certainty: high certainty equals Lump Sum, medium certainty with complexity equals GMP, low certainty or fast-track equals Cost Plus."
+    }
+] 

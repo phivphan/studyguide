@@ -4,10 +4,12 @@ let currentMode = '';
 let currentFilter = '';
 let flashcards = [];
 let multipleChoice = [];
+let longForm = [];
 let currentCardIndex = 0;
 let availableCards = [];
 let completedCards = new Set();
 let isFlipped = false;
+let isAnswerShown = false;
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', async () => {
@@ -31,12 +33,21 @@ async function loadData() {
         }
         multipleChoice = await mcResponse.json();
         
+        const lfResponse = await fetch('long-form.json');
+        if (!lfResponse.ok) {
+            throw new Error(`Failed to load long form: ${lfResponse.status}`);
+        }
+        longForm = await lfResponse.json();
+        
         // Validate that we have content
         if (!flashcards || flashcards.length === 0) {
             throw new Error('No flashcards found in flashcards.json');
         }
         if (!multipleChoice || multipleChoice.length === 0) {
             throw new Error('No questions found in multiple-choice.json');
+        }
+        if (!longForm || longForm.length === 0) {
+            throw new Error('No questions found in long-form.json');
         }
         
     } catch (error) {
@@ -45,6 +56,7 @@ async function loadData() {
         // Set empty arrays to prevent further errors
         flashcards = [];
         multipleChoice = [];
+        longForm = [];
     }
 }
 
@@ -93,6 +105,10 @@ function startStudy(mode, filter) {
         prepareMultipleChoice();
         showScreen('multiple-choice');
         displayCurrentQuestion();
+    } else if (mode === 'long-form') {
+        prepareLongForm();
+        showScreen('long-form');
+        displayCurrentLongForm();
     }
 }
 
@@ -145,6 +161,32 @@ function prepareMultipleChoice() {
     }
     
     currentCardIndex = 0;
+}
+
+// Prepare long form for study
+function prepareLongForm() {
+    if (currentFilter === 'all') {
+        availableCards = [...longForm];
+    } else {
+        availableCards = longForm.filter(card => 
+            !completedCards.has(`longform-${card.id}`)
+        );
+    }
+    
+    if (availableCards.length === 0) {
+        alert('No long form questions available!');
+        goHome();
+        return;
+    }
+    
+    // Shuffle questions
+    for (let i = availableCards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [availableCards[i], availableCards[j]] = [availableCards[j], availableCards[i]];
+    }
+    
+    currentCardIndex = 0;
+    isAnswerShown = false;
 }
 
 // Flashcard functions
@@ -249,6 +291,56 @@ function selectAnswer(selectedIndex) {
     }, 2000);
 }
 
+// Long form functions
+function displayCurrentLongForm() {
+    if (availableCards.length === 0) {
+        alert('No long form questions available!');
+        goHome();
+        return;
+    }
+    
+    const question = availableCards[currentCardIndex];
+    document.getElementById('lf-question').textContent = question.question;
+    document.getElementById('lf-answer-text').textContent = question.answer;
+    
+    // Update counter
+    document.getElementById('lf-counter').textContent = 
+        `${currentCardIndex + 1} of ${availableCards.length}`;
+    
+    // Reset answer state
+    const answerDiv = document.getElementById('lf-answer');
+    const showBtn = document.getElementById('show-answer-btn');
+    answerDiv.style.display = 'none';
+    showBtn.style.display = 'block';
+    showBtn.textContent = 'Show Answer';
+    isAnswerShown = false;
+}
+
+function showAnswer() {
+    const answerDiv = document.getElementById('lf-answer');
+    const showBtn = document.getElementById('show-answer-btn');
+    
+    if (!isAnswerShown) {
+        answerDiv.style.display = 'block';
+        showBtn.textContent = 'Hide Answer';
+        isAnswerShown = true;
+    } else {
+        answerDiv.style.display = 'none';
+        showBtn.textContent = 'Show Answer';
+        isAnswerShown = false;
+    }
+}
+
+function nextLongForm() {
+    currentCardIndex = (currentCardIndex + 1) % availableCards.length;
+    displayCurrentLongForm();
+}
+
+function previousLongForm() {
+    currentCardIndex = (currentCardIndex - 1 + availableCards.length) % availableCards.length;
+    displayCurrentLongForm();
+}
+
 // Mark current item as complete
 function markComplete() {
     if (currentMode === 'flashcards' && availableCards.length > 0) {
@@ -262,6 +354,11 @@ function markComplete() {
         saveProgress();
         currentCardIndex++;
         displayCurrentQuestion();
+    } else if (currentMode === 'long-form' && availableCards.length > 0) {
+        const cardId = `longform-${availableCards[currentCardIndex].id}`;
+        completedCards.add(cardId);
+        saveProgress();
+        nextLongForm();
     }
 }
 
