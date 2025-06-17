@@ -283,12 +283,16 @@ function selectAnswer(selectedIndex) {
         completedCards.add(cardId);
         saveProgress();
     }
-    
-    // Auto advance after 2 seconds
-    setTimeout(() => {
-        currentCardIndex = (currentCardIndex + 1) % availableCards.length;
-        displayCurrentQuestion();
-    }, 2000);
+}
+
+function nextMultipleChoice() {
+    currentCardIndex = (currentCardIndex + 1) % availableCards.length;
+    displayCurrentQuestion();
+}
+
+function previousMultipleChoice() {
+    currentCardIndex = (currentCardIndex - 1 + availableCards.length) % availableCards.length;
+    displayCurrentQuestion();
 }
 
 // Long form functions
@@ -352,8 +356,7 @@ function markComplete() {
         const cardId = `mc-${availableCards[currentCardIndex].id}`;
         completedCards.add(cardId);
         saveProgress();
-        currentCardIndex++;
-        displayCurrentQuestion();
+        nextMultipleChoice();
     } else if (currentMode === 'long-form' && availableCards.length > 0) {
         const cardId = `longform-${availableCards[currentCardIndex].id}`;
         completedCards.add(cardId);
