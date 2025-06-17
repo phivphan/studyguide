@@ -12,24 +12,29 @@
         <div class="container">
             <h1>Study Guide</h1>
             <div class="study-options">
-                <button class="study-btn" onclick="startStudy('flashcards', 'all')">
-                    Flashcards (All)
-                </button>
-                <button class="study-btn" onclick="startStudy('flashcards', 'active')">
-                    Flashcards (Active)
-                </button>
-                <button class="study-btn" onclick="startStudy('multiple-choice', 'all')">
-                    Multiple Choice (All)
-                </button>
-                <button class="study-btn" onclick="startStudy('multiple-choice', 'active')">
-                    Multiple Choice (Active)
-                </button>
-                <button class="study-btn" onclick="startStudy('long-form', 'all')">
-                    Long Form Questions (All)
-                </button>
-                <button class="study-btn" onclick="startStudy('long-form', 'active')">
-                    Long Form Questions (Active)
-                </button>
+                <div class="study-card">
+                    <h2 class="study-card-title">📚 Flashcards</h2>
+                    <div class="study-card-buttons">
+                        <button class="study-card-btn" onclick="startStudy('flashcards', 'all')">All</button>
+                        <button class="study-card-btn" onclick="startStudy('flashcards', 'active')">Active</button>
+                    </div>
+                </div>
+                
+                <div class="study-card">
+                    <h2 class="study-card-title">📝 Multiple Choice</h2>
+                    <div class="study-card-buttons">
+                        <button class="study-card-btn" onclick="startStudy('multiple-choice', 'all')">All</button>
+                        <button class="study-card-btn" onclick="startStudy('multiple-choice', 'active')">Active</button>
+                    </div>
+                </div>
+                
+                <div class="study-card">
+                    <h2 class="study-card-title">📄 Long Form Q&A</h2>
+                    <div class="study-card-buttons">
+                        <button class="study-card-btn" onclick="startStudy('long-form', 'all')">All</button>
+                        <button class="study-card-btn" onclick="startStudy('long-form', 'active')">Active</button>
+                    </div>
+                </div>
             </div>
             <button class="reset-btn" onclick="resetProgress()">
                 Reset Progress
