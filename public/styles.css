@@ -145,8 +145,6 @@ p {
 }
 
 .study-card-btn {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
     border: none;
     padding: var(--spacing-xs) var(--spacing-md);
     font-size: var(--font-size-base);
@@ -155,11 +153,28 @@ p {
     cursor: pointer;
     transition: all 0.2s ease;
     flex: 1;
-    max-width: 80px;
+    text-align: center;
 }
 
-.study-card-btn:hover {
+.study-card-btn:first-child {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.study-card-btn:last-child {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--primary-color);
+}
+
+.study-card-btn:first-child:hover {
     background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.study-card-btn:last-child:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     transform: scale(1.05);
 }
 
