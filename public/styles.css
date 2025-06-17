@@ -1,11 +1,16 @@
 :root {
-    --primary-color: #000000;
+    --primary-color:rgba(0, 0, 0, 1);
     --secondary-color: #ffffff;
     --accent-color: #007AFF;
-    --text-primary: var(--primary-color);
+    --text-primary: rgba(0, 0, 0, 0.8);
     --text-secondary: #666666;
     --background-primary: var(--secondary-color);
     --background-secondary: var(--primary-color);
+    
+    /* Border Colors - Softer than button colors */
+    --border-light: rgba(0, 0, 0, 0.1);
+    --border-medium: rgba(0, 0, 0, 0.2);
+    --border-dark: rgba(0, 0, 0, 0.3);
     
     /* Font Sizes - Maximum 2 sizes */
     --font-size-large: 1.5rem;
@@ -124,7 +129,7 @@ p {
 
 .study-card {
     background-color: var(--background-primary);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-medium);
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -169,7 +174,7 @@ p {
 .study-card-btn:last-child {
     background-color: var(--background-primary);
     color: var(--text-primary);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-dark);
 }
 
 .study-card-btn:first-child:hover {
@@ -189,7 +194,7 @@ p {
 
 .reset-btn {
     background: none;
-    border: 1px solid var(--text-secondary);
+    border: 1px solid var(--border-dark);
     color: var(--text-secondary);
     padding: var(--spacing-sm) var(--spacing-lg);
     font-size: var(--font-size-base);
@@ -241,7 +246,7 @@ p {
 .flashcard-front {
     background-color: var(--background-primary);
     color: var(--text-primary);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-medium);
 }
 
 .flashcard-back {
@@ -328,7 +333,7 @@ p {
 .option-btn {
     background-color: var(--background-primary);
     color: var(--text-primary);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-medium);
     padding: var(--spacing-sm) var(--spacing-lg);
     font-size: var(--font-size-base);
     border-radius: var(--radius-md);
