@@ -14,59 +14,8 @@
     <div id="home-screen" class="screen active">
         <div class="container">
             <h1>Study Guide</h1>
-            <div class="study-options">
-                <div class="study-card">
-                    <h2 class="study-card-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 0.5rem;">
-                            <g class="oi-cards">
-                                <path class="oi-vector" d="M17.25 7.5H3.75C3.33579 7.5 3 7.83579 3 8.25V18.75C3 19.1642 3.33579 19.5 3.75 19.5H17.25C17.6642 19.5 18 19.1642 18 18.75V8.25C18 7.83579 17.6642 7.5 17.25 7.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path class="oi-vector" d="M6 4.5H20.25C20.4489 4.5 20.6397 4.57902 20.7803 4.71967C20.921 4.86032 21 5.05109 21 5.25V16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </g>
-                        </svg>
-                        Flashcards
-                    </h2>
-                    <div class="study-card-buttons">
-                        <button class="study-card-btn" onclick="startStudy('flashcards', 'active')">Continue</button>
-                        <button class="study-card-btn" onclick="startStudy('flashcards', 'all')">Review All</button>
-                    </div>
-                </div>
-                
-                <div class="study-card">
-                    <h2 class="study-card-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 0.5rem;">
-                            <g class="oi-radio-options">
-                                <circle class="oi-ellipse" cx="6.5" cy="6.5" r="3.5" stroke="currentColor" stroke-width="2"/>
-                                <circle class="oi-ellipse" cx="6.5" cy="17.5" r="3.5" stroke="currentColor" stroke-width="2"/>
-                                <circle class="oi-fill" cx="6.5" cy="6.5" r="1.25" fill="currentColor"/>
-                                <path class="oi-line" d="M21.5 6.5H13.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path class="oi-line" d="M21.5 17.5H13.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            </g>
-                        </svg>
-                        Multiple Choice
-                    </h2>
-                    <div class="study-card-buttons">
-                        <button class="study-card-btn" onclick="startStudy('multiple-choice', 'active')">Continue</button>
-                        <button class="study-card-btn" onclick="startStudy('multiple-choice', 'all')">Review All</button>
-                    </div>
-                </div>
-                
-                <div class="study-card">
-                    <h2 class="study-card-title">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 0.5rem;">
-                            <g class="oi-document">
-                                <path class="oi-box" d="M5 4C5 3.44772 5.44772 3 6 3H14L19 8V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V4Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path class="oi-line" d="M13 3V9H19" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path class="oi-line" d="M15 13L9 13" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path class="oi-line" d="M15 17L9 17" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            </g>
-                        </svg>
-                        Long Form Q&A
-                    </h2>
-                    <div class="study-card-buttons">
-                        <button class="study-card-btn" onclick="startStudy('long-form', 'active')">Continue</button>
-                        <button class="study-card-btn" onclick="startStudy('long-form', 'all')">Review All</button>
-                    </div>
-                </div>
+            <div class="bucket-options" id="bucket-options">
+                <!-- Buckets will be populated by JavaScript -->
             </div>
             <button class="reset-btn" onclick="resetProgress()">
                 Reset Progress

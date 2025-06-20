@@ -1,0 +1,17 @@
+[
+  {
+    "id": "data-center-systems",
+    "name": "Data Center Systems",
+    "description": "Power, cooling, and infrastructure systems"
+  },
+  {
+    "id": "construction-management", 
+    "name": "Construction Management",
+    "description": "General construction principles and practices"
+  },
+  {
+    "id": "pre-construction-management",
+    "name": "Pre-Construction Management", 
+    "description": "Planning, feasibility, and pre-construction processes"
+  }
+] 

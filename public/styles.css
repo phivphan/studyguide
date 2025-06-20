@@ -133,11 +133,73 @@ p {
 }
 
 /* Home Screen */
-.study-options {
+.bucket-options {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
+}
+
+.bucket-card {
+    background-color: var(--background-primary);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.bucket-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.bucket-header {
+    padding: var(--spacing-md);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bucket-info {
+    flex: 1;
+}
+
+.bucket-title {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-heavy);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.bucket-description {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+}
+
+.bucket-chevron {
+    transition: transform 0.2s ease;
+    color: var(--text-secondary);
+}
+
+.bucket-card.expanded .bucket-chevron {
+    transform: rotate(180deg);
+}
+
+.bucket-content {
+    display: none;
+    padding: 0 var(--spacing-md) var(--spacing-md);
+    border-top: 1px solid var(--border-light);
+}
+
+.bucket-card.expanded .bucket-content {
+    display: block;
+}
+
+.study-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
 }
 
 .study-card {

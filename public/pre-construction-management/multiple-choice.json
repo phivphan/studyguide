@@ -1,0 +1,362 @@
+[
+    {
+        "id": 1,
+        "question": "What is the actual Phase 1 construction cost for Crusoe's Abilene facility?",
+        "options": ["$200 million", "$584 million", "$800 million", "$1.2 billion"],
+        "correctIndex": 1
+    },
+    {
+        "id": 2,
+        "question": "What power density range is typical for AI training workloads?",
+        "options": ["15-25kW per rack", "25-45kW per rack", "60-120kW per rack", "150-200kW per rack"],
+        "correctIndex": 2
+    },
+    {
+        "id": 3,
+        "question": "What percentage of heat load can direct-to-chip cooling remove?",
+        "options": ["50-60%", "60-70%", "70-75%", "80-85%"],
+        "correctIndex": 2
+    },
+    {
+        "id": 4,
+        "question": "How many GPUs can Crusoe house per building in their Abilene facility?",
+        "options": ["50,000", "75,000", "100,000", "125,000"],
+        "correctIndex": 2
+    },
+    {
+        "id": 5,
+        "question": "What is Crusoe's Water Usage Effectiveness (WUE) with their closed loop system?",
+        "options": ["0.10 L/kWh", "0.30 L/kWh", "Near zero", "0.50 L/kWh"],
+        "correctIndex": 2
+    },
+    {
+        "id": 6,
+        "question": "What percentage of traditional data center space can support AI power densities?",
+        "options": ["15%", "25%", "35%", "50%"],
+        "correctIndex": 1
+    },
+    {
+        "id": 7,
+        "question": "What voltage architecture is emerging to replace 12V systems?",
+        "options": ["24V", "36V", "48V", "60V"],
+        "correctIndex": 2
+    },
+    {
+        "id": 8,
+        "question": "What is the typical lead time for major electrical equipment?",
+        "options": ["6-9 months", "9-12 months", "12-18 months", "18-24 months"],
+        "correctIndex": 2
+    },
+    {
+        "id": 9,
+        "question": "What percentage of AI data centers use design-build delivery?",
+        "options": ["50-60%", "60-70%", "70-80%", "80-90%"],
+        "correctIndex": 2
+    },
+    {
+        "id": 10,
+        "question": "What is Microsoft's 2025 AI infrastructure investment target?",
+        "options": ["$60 billion", "$70 billion", "$80 billion", "$90 billion"],
+        "correctIndex": 2
+    },
+    {
+        "id": 11,
+        "question": "What power densities can immersion cooling support?",
+        "options": ["80-100kW per rack", "100-120kW per rack", "100-150kW+ per rack", "150-200kW per rack"],
+        "correctIndex": 2
+    },
+    {
+        "id": 12,
+        "question": "At what power density do traditional CRAC units become inadequate?",
+        "options": ["15-20kW per rack", "20-30kW per rack", "30-40kW per rack", "40-50kW per rack"],
+        "correctIndex": 1
+    },
+    {
+        "id": 13,
+        "question": "What is the cost range for substations serving facilities exceeding 10MW?",
+        "options": ["$1-3 million", "$3-7 million", "$7-12 million", "$12-20 million"],
+        "correctIndex": 1
+    },
+    {
+        "id": 14,
+        "question": "What percentage of AI data center retrofit cost do electrical systems represent?",
+        "options": ["30-35%", "35-40%", "40-45%", "45-50%"],
+        "correctIndex": 2
+    },
+    {
+        "id": 15,
+        "question": "What is CoreWeave's total funding amount?",
+        "options": ["$8.2 billion", "$10.5 billion", "$12.7 billion", "$15.3 billion"],
+        "correctIndex": 2
+    },
+    {
+        "id": 16,
+        "question": "How does Lambda Labs' H100 pricing compare to AWS?",
+        "options": ["$2.49/hour vs $8+/hour", "$2.49/hour vs $12+/hour", "$3.50/hour vs $12+/hour", "$4.25/hour vs $15+/hour"],
+        "correctIndex": 1
+    },
+    {
+        "id": 17,
+        "question": "What is the minimum generator fuel capacity requirement?",
+        "options": ["12-24 hours", "24-48 hours", "24-72 hours", "48-96 hours"],
+        "correctIndex": 2
+    },
+    {
+        "id": 18,
+        "question": "What UPS battery backup duration is typical during generator startup?",
+        "options": ["2-3 minutes", "5-10 minutes", "10-15 minutes", "15-20 minutes"],
+        "correctIndex": 1
+    },
+    {
+        "id": 19,
+        "question": "What is the industry average PUE?",
+        "options": ["1.45", "1.56", "1.67", "1.78"],
+        "correctIndex": 1
+    },
+    {
+        "id": 20,
+        "question": "What PUE do leading operators achieve?",
+        "options": ["1.05-1.08", "1.09-1.10", "1.12-1.15", "1.18-1.20"],
+        "correctIndex": 1
+    },
+    {
+        "id": 21,
+        "question": "What is the current percentage of data centers with liquid cooling installed?",
+        "options": ["18%", "22%", "26%", "30%"],
+        "correctIndex": 1
+    },
+    {
+        "id": 22,
+        "question": "What floor loading capacity increase is required for AI equipment?",
+        "options": ["3-5 KN/m² to 8-10 KN/m²", "3-5 KN/m² to 10-15 KN/m²", "5-8 KN/m² to 12-18 KN/m²", "8-10 KN/m² to 15-20 KN/m²"],
+        "correctIndex": 1
+    },
+    {
+        "id": 23,
+        "question": "What vertical clearance is needed for AI data centers?",
+        "options": ["6-7 meters", "7-8 meters", "8-9 meters", "9-10 meters"],
+        "correctIndex": 2
+    },
+    {
+        "id": 24,
+        "question": "What clean agents are commonly used for equipment fire protection?",
+        "options": ["FM-200 and NOVEC 1230", "CO2 and Argon", "Water mist and foam", "Halon and FM-100"],
+        "correctIndex": 0
+    },
+    {
+        "id": 25,
+        "question": "What network bandwidth does InfiniBand provide for AI clusters?",
+        "options": ["100 Gbps per port", "200 Gbps per port", "400 Gbps per port", "800 Gbps per port"],
+        "correctIndex": 1
+    },
+    {
+        "id": 26,
+        "question": "What is the current standard for AI backend networking?",
+        "options": ["200 Gigabit Ethernet", "400 Gigabit Ethernet", "800 Gigabit Ethernet", "1.6 Terabit Ethernet"],
+        "correctIndex": 1
+    },
+    {
+        "id": 27,
+        "question": "What network standard is expected to dominate by 2025?",
+        "options": ["400GbE", "800GbE", "1.6TbE", "3.2TbE"],
+        "correctIndex": 1
+    },
+    {
+        "id": 28,
+        "question": "What contingency percentage is typical for AI data center projects?",
+        "options": ["5-8%", "8-12%", "10-15%", "15-20%"],
+        "correctIndex": 2
+    },
+    {
+        "id": 29,
+        "question": "How does design-build compress traditional schedules?",
+        "options": ["24-36 months to 18-24 months", "24-36 months to 15-20 months", "24-36 months to 12-18 months", "30-40 months to 18-24 months"],
+        "correctIndex": 2
+    },
+    {
+        "id": 30,
+        "question": "What chilled water supply temperatures are typical for AI data centers?",
+        "options": ["35-45°F", "45-55°F", "55-65°F", "65-75°F"],
+        "correctIndex": 1
+    },
+    {
+        "id": 31,
+        "question": "What is Microsoft's target WUE by 2030?",
+        "options": ["0.2 L/kWh", "0.3 L/kWh", "0.4 L/kWh", "0.5 L/kWh"],
+        "correctIndex": 1
+    },
+    {
+        "id": 32,
+        "question": "What power density does CyrusOne's Intelliscale support?",
+        "options": ["200kW per rack", "250kW per rack", "300kW per rack", "350kW per rack"],
+        "correctIndex": 2
+    },
+    {
+        "id": 33,
+        "question": "What is Digital Realty's AI strategy partnership value?",
+        "options": ["$5 billion with KKR", "$7 billion with Blackstone", "$9 billion with Apollo", "$12 billion with Brookfield"],
+        "correctIndex": 1
+    },
+    {
+        "id": 34,
+        "question": "What makes DPR Construction notable for AI data centers?",
+        "options": ["Lowest cost approach", "Virtual Design and Construction capabilities", "Fastest delivery times", "Largest project portfolio"],
+        "correctIndex": 1
+    },
+    {
+        "id": 35,
+        "question": "What is Meta's 2025 investment amount?",
+        "options": ["$55-60 billion", "$60-65 billion", "$65-70 billion", "$70-75 billion"],
+        "correctIndex": 1
+    },
+    {
+        "id": 36,
+        "question": "How much more efficient is 3-phase power compared to single-phase?",
+        "options": ["1.5x", "1.7x", "2.0x", "2.3x"],
+        "correctIndex": 1
+    },
+    {
+        "id": 37,
+        "question": "What medium voltage levels are typical for AI data center utility feeds?",
+        "options": ["4.16kV, 12.47kV, 13.8kV", "13.2kV, 13.8kV, 27.6kV", "23kV, 34.5kV, 46kV", "69kV, 115kV, 138kV"],
+        "correctIndex": 1
+    },
+    {
+        "id": 38,
+        "question": "What cost savings does Crusoe achieve with their energy-first approach?",
+        "options": ["Up to 20%", "Up to 25%", "Up to 30%", "Up to 35%"],
+        "correctIndex": 2
+    },
+    {
+        "id": 39,
+        "question": "What is the total retrofit cost range per gross square foot?",
+        "options": ["$320-600", "$520-900", "$720-1,200", "$920-1,500"],
+        "correctIndex": 1
+    },
+    {
+        "id": 40,
+        "question": "What percentage represents electrical systems in total retrofit costs?",
+        "options": ["$180-280 per sq ft", "$280-460 per sq ft", "$380-560 per sq ft", "$480-660 per sq ft"],
+        "correctIndex": 1
+    },
+    {
+        "id": 41,
+        "question": "What does CPM stand for in project management?",
+        "options": ["Cost Performance Method", "Critical Path Method", "Construction Planning Model", "Contractor Performance Metrics"],
+        "correctIndex": 1
+    },
+    {
+        "id": 42,
+        "question": "In a project network, what is float?",
+        "options": ["The amount of time an activity can be delayed without delaying the project", "The total duration of the project", "The cost buffer for activities", "The quality variance allowance"],
+        "correctIndex": 0
+    },
+    {
+        "id": 43,
+        "question": "What is the main difference between fast tracking and crashing?",
+        "options": ["Fast tracking adds resources, crashing overlaps activities", "Fast tracking overlaps activities, crashing adds resources", "Fast tracking reduces scope, crashing maintains scope", "No difference, they are the same technique"],
+        "correctIndex": 1
+    },
+    {
+        "id": 44,
+        "question": "In a GMP contract, who bears the risk if actual costs exceed the guaranteed maximum price?",
+        "options": ["Owner", "Contractor", "Shared equally", "Insurance company"],
+        "correctIndex": 1
+    },
+    {
+        "id": 45,
+        "question": "What is the main advantage of a Cost Plus contract?",
+        "options": ["Price certainty for owner", "Maximum flexibility for scope changes", "Lowest administrative burden", "Fastest procurement process"],
+        "correctIndex": 1
+    },
+    {
+        "id": 46,
+        "question": "In which contract type does the owner have the most cost risk?",
+        "options": ["Lump Sum", "GMP", "Cost Plus", "Unit Price"],
+        "correctIndex": 2
+    },
+    {
+        "id": 47,
+        "question": "What is the purpose of a baseline schedule?",
+        "options": ["Initial schedule before any updates", "Schedule used for performance measurement", "Final approved schedule", "Schedule with maximum float"],
+        "correctIndex": 1
+    },
+    {
+        "id": 48,
+        "question": "Which type of dependency is most common in construction sequencing?",
+        "options": ["Start-to-Start (SS)", "Finish-to-Start (FS)", "Start-to-Finish (SF)", "Finish-to-Finish (FF)"],
+        "correctIndex": 1
+    },
+    {
+        "id": 49,
+        "question": "What does a negative float indicate?",
+        "options": ["Extra time available", "Project is ahead of schedule", "Activity is behind schedule/project delay", "Resource over-allocation"],
+        "correctIndex": 2
+    },
+    {
+        "id": 50,
+        "question": "In Earned Value Management, what does CPI measure?",
+        "options": ["Schedule performance", "Cost performance efficiency", "Quality metrics", "Resource utilization"],
+        "correctIndex": 1
+    },
+    {
+        "id": 51,
+        "question": "What is the formula for Schedule Variance (SV)?",
+        "options": ["SV = EV - PV", "SV = EV - AC", "SV = PV - AC", "SV = AC - EV"],
+        "correctIndex": 0
+    },
+    {
+        "id": 52,
+        "question": "Which project phase typically has the highest cost of changes?",
+        "options": ["Initiation", "Planning", "Execution", "Closeout"],
+        "correctIndex": 2
+    },
+    {
+        "id": 53,
+        "question": "What is resource leveling primarily used for?",
+        "options": ["Reducing project duration", "Smoothing resource demand", "Increasing project budget", "Improving quality"],
+        "correctIndex": 1
+    },
+    {
+        "id": 54,
+        "question": "In a Work Breakdown Structure (WBS), what is the 100% rule?",
+        "options": ["All work must be 100% complete", "WBS must account for 100% of project scope", "Each task must be 100% defined", "Budget must be 100% allocated"],
+        "correctIndex": 1
+    },
+    {
+        "id": 55,
+        "question": "What is the primary purpose of a project charter?",
+        "options": ["Detailed project schedule", "Formal project authorization", "Budget breakdown", "Risk assessment"],
+        "correctIndex": 1
+    },
+    {
+        "id": 56,
+        "question": "Which contract type provides the most incentive for contractor efficiency?",
+        "options": ["Cost Plus Fixed Fee", "Cost Plus Incentive Fee", "Lump Sum", "Time and Materials"],
+        "correctIndex": 2
+    },
+    {
+        "id": 57,
+        "question": "What is the main risk of fast tracking a project?",
+        "options": ["Increased costs", "Reduced quality", "Increased rework due to design changes", "Resource conflicts"],
+        "correctIndex": 2
+    },
+    {
+        "id": 58,
+        "question": "In project communications, what is the formula for communication channels?",
+        "options": ["n(n-1)", "n(n-1)/2", "n²", "2n-1"],
+        "correctIndex": 1
+    },
+    {
+        "id": 59,
+        "question": "What is the difference between lag and lead time?",
+        "options": ["Lag adds delay, lead adds overlap", "Lag adds overlap, lead adds delay", "No difference", "Lag is positive, lead is negative"],
+        "correctIndex": 0
+    },
+    {
+        "id": 60,
+        "question": "Which document formally closes out a construction project?",
+        "options": ["Final invoice", "Certificate of substantial completion", "Project charter", "Lessons learned report"],
+        "correctIndex": 1
+    }
+] 

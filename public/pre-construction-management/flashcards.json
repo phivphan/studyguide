@@ -1,0 +1,802 @@
+[
+    {
+        "id": 1,
+        "front": "What does GPU stand for?",
+        "back": "Graphics Processing Unit - specialized processors for parallel computing tasks, essential for AI training and inference"
+    },
+    {
+        "id": 2,
+        "front": "What does TPU stand for?",
+        "back": "Tensor Processing Unit - Google's custom AI accelerator chips optimized for machine learning workloads"
+    },
+    {
+        "id": 3,
+        "front": "What does DTC stand for in cooling?",
+        "back": "Direct-to-Chip - liquid cooling method using cold plates attached directly to processors"
+    },
+    {
+        "id": 4,
+        "front": "What does CDU stand for?",
+        "back": "Cooling Distribution Unit - equipment that interfaces between facility cooling loops and IT equipment cooling loops"
+    },
+    {
+        "id": 5,
+        "front": "What does PUE stand for?",
+        "back": "Power Usage Effectiveness - metric measuring data center energy efficiency (total facility power / IT equipment power)"
+    },
+    {
+        "id": 6,
+        "front": "What does WUE stand for?",
+        "back": "Water Usage Effectiveness - metric measuring water consumption efficiency (liters consumed per kWh of IT energy)"
+    },
+    {
+        "id": 7,
+        "front": "What does CRAH stand for?",
+        "back": "Computer Room Air Handler - air handling unit designed specifically for data center cooling"
+    },
+    {
+        "id": 8,
+        "front": "What does CRAC stand for?",
+        "back": "Computer Room Air Conditioner - traditional air conditioning unit for data centers, less efficient than CRAH"
+    },
+    {
+        "id": 9,
+        "front": "What does UPS stand for?",
+        "back": "Uninterruptible Power Supply - provides backup power during outages and power quality conditioning"
+    },
+    {
+        "id": 10,
+        "front": "What does PDU stand for?",
+        "back": "Power Distribution Unit - distributes electrical power to IT equipment at rack or facility level"
+    },
+    {
+        "id": 11,
+        "front": "What does SLD stand for?",
+        "back": "Single Line Diagram - simplified electrical diagram showing power flow from utility to end equipment"
+    },
+    {
+        "id": 12,
+        "front": "What does VESDA stand for?",
+        "back": "Very Early Smoke Detection Apparatus - detects microscopic particles before visible smoke formation"
+    },
+    {
+        "id": 13,
+        "front": "What does InfiniBand provide in AI data centers?",
+        "back": "Low-latency, high-bandwidth networking up to 200 Gbps per port for AI cluster communication"
+    },
+    {
+        "id": 14,
+        "front": "What does 400GbE stand for?",
+        "back": "400 Gigabit Ethernet - current standard for AI backend networking"
+    },
+    {
+        "id": 15,
+        "front": "What is Ultra Ethernet?",
+        "back": "Combines traditional Ethernet with InfiniBand-like features optimized for AI workloads"
+    },
+    {
+        "id": 16,
+        "front": "What does HVAC stand for?",
+        "back": "Heating, Ventilation, and Air Conditioning - building environmental control systems"
+    },
+    {
+        "id": 17,
+        "front": "What does AHU stand for?",
+        "back": "Air Handling Unit - equipment that conditions and circulates air in buildings"
+    },
+    {
+        "id": 18,
+        "front": "What does VFD stand for?",
+        "back": "Variable Frequency Drive - controls motor speed and torque by varying input frequency and voltage"
+    },
+    {
+        "id": 19,
+        "front": "What does BMS stand for?",
+        "back": "Building Management System - computerized control system for building mechanical and electrical equipment"
+    },
+    {
+        "id": 20,
+        "front": "What does DCIM stand for?",
+        "back": "Data Center Infrastructure Management - software for monitoring and managing data center assets"
+    },
+    {
+        "id": 21,
+        "front": "What does kW stand for and how does it differ from kWh?",
+        "back": "Kilowatt (power at an instant) vs Kilowatt-hour (energy consumed over time)"
+    },
+    {
+        "id": 22,
+        "front": "What does MW stand for?",
+        "back": "Megawatt - one million watts, typical measurement for large data center power capacity"
+    },
+    {
+        "id": 23,
+        "front": "What does kVA stand for?",
+        "back": "Kilovolt-Ampere - apparent power measurement accounting for reactive power components"
+    },
+    {
+        "id": 24,
+        "front": "What does MTBF stand for?",
+        "back": "Mean Time Between Failures - reliability metric for equipment expected operational time"
+    },
+    {
+        "id": 25,
+        "front": "What does MTTR stand for?",
+        "back": "Mean Time To Repair - average time needed to restore equipment to operational status"
+    },
+    {
+        "id": 26,
+        "front": "What does SLA stand for?",
+        "back": "Service Level Agreement - contractual commitment for service performance standards"
+    },
+    {
+        "id": 27,
+        "front": "What does RTO stand for?",
+        "back": "Recovery Time Objective - maximum acceptable downtime after a disaster event"
+    },
+    {
+        "id": 28,
+        "front": "What does RPO stand for?",
+        "back": "Recovery Point Objective - maximum acceptable data loss measured in time"
+    },
+    {
+        "id": 29,
+        "front": "What does CAPEX stand for?",
+        "back": "Capital Expenditure - funds used to acquire, upgrade, and maintain physical assets"
+    },
+    {
+        "id": 30,
+        "front": "What does OPEX stand for?",
+        "back": "Operational Expenditure - ongoing business costs for day-to-day operations"
+    },
+    {
+        "id": 31,
+        "front": "What does TCO stand for?",
+        "back": "Total Cost of Ownership - complete cost of owning an asset over its entire lifecycle"
+    },
+    {
+        "id": 32,
+        "front": "What does ROI stand for?",
+        "back": "Return on Investment - financial metric measuring investment efficiency and profitability"
+    },
+    {
+        "id": 33,
+        "front": "What does IRR stand for?",
+        "back": "Internal Rate of Return - discount rate that makes net present value equal zero"
+    },
+    {
+        "id": 34,
+        "front": "What does NPV stand for?",
+        "back": "Net Present Value - difference between present value of cash inflows and outflows"
+    },
+    {
+        "id": 35,
+        "front": "What does CFM stand for?",
+        "back": "Cubic Feet per Minute - measurement of volumetric flow rate for air handling systems"
+    },
+    {
+        "id": 36,
+        "front": "What does BTU stand for?",
+        "back": "British Thermal Unit - energy measurement equal to heat needed to raise 1 pound of water 1°F"
+    },
+    {
+        "id": 37,
+        "front": "What does COP stand for in cooling?",
+        "back": "Coefficient of Performance - cooling efficiency ratio of heat removed to energy consumed"
+    },
+    {
+        "id": 38,
+        "front": "What does EER stand for?",
+        "back": "Energy Efficiency Ratio - cooling efficiency measurement under specific operating conditions"
+    },
+    {
+        "id": 39,
+        "front": "What does SEER stand for?",
+        "back": "Seasonal Energy Efficiency Ratio - cooling efficiency over entire cooling season"
+    },
+    {
+        "id": 40,
+        "front": "What does Delta T (ΔT) mean?",
+        "back": "Temperature difference between two points, critical for cooling system design"
+    },
+    {
+        "id": 41,
+        "front": "What does GPM stand for?",
+        "back": "Gallons Per Minute - flow rate measurement for liquid cooling systems"
+    },
+    {
+        "id": 42,
+        "front": "What does PSI stand for?",
+        "back": "Pounds per Square Inch - pressure measurement for fluid systems"
+    },
+    {
+        "id": 43,
+        "front": "What does PSIG vs PSIA mean?",
+        "back": "PSIG (gauge pressure relative to atmosphere) vs PSIA (absolute pressure including atmosphere)"
+    },
+    {
+        "id": 44,
+        "front": "What does IP rating stand for?",
+        "back": "Ingress Protection - international standard for enclosure protection against particles and moisture"
+    },
+    {
+        "id": 45,
+        "front": "What does NEMA stand for?",
+        "back": "National Electrical Manufacturers Association - develops standards for electrical equipment"
+    },
+    {
+        "id": 46,
+        "front": "What does IEEE stand for?",
+        "back": "Institute of Electrical and Electronics Engineers - develops electrical and technology standards"
+    },
+    {
+        "id": 47,
+        "front": "What does ANSI stand for?",
+        "back": "American National Standards Institute - oversees development of voluntary consensus standards"
+    },
+    {
+        "id": 48,
+        "front": "What does ASHRAE stand for?",
+        "back": "American Society of Heating, Refrigerating and Air-Conditioning Engineers - develops HVAC standards"
+    },
+    {
+        "id": 49,
+        "front": "What does TIA stand for?",
+        "back": "Telecommunications Industry Association - develops telecommunications standards including TIA-942"
+    },
+    {
+        "id": 50,
+        "front": "What does NEC stand for?",
+        "back": "National Electrical Code - standard for electrical installation safety in the United States"
+    },
+    {
+        "id": 51,
+        "front": "What does NFPA stand for?",
+        "back": "National Fire Protection Association - develops fire safety codes and standards"
+    },
+    {
+        "id": 52,
+        "front": "What does LEED stand for?",
+        "back": "Leadership in Energy and Environmental Design - green building certification program"
+    },
+    {
+        "id": 53,
+        "front": "What does BREEAM stand for?",
+        "back": "Building Research Establishment Environmental Assessment Method - UK green building standard"
+    },
+    {
+        "id": 54,
+        "front": "What does ENERGY STAR mean for data centers?",
+        "back": "EPA program recognizing energy-efficient data centers meeting specific performance criteria"
+    },
+    {
+        "id": 55,
+        "front": "What does ISO 14001 cover?",
+        "back": "International standard for environmental management systems and sustainability"
+    },
+    {
+        "id": 56,
+        "front": "What does SOC stand for in compliance?",
+        "back": "Service Organization Control - compliance framework for service organizations' internal controls"
+    },
+    {
+        "id": 57,
+        "front": "What does HIPAA stand for?",
+        "back": "Health Insurance Portability and Accountability Act - healthcare data privacy regulation"
+    },
+    {
+        "id": 58,
+        "front": "What does PCI DSS stand for?",
+        "back": "Payment Card Industry Data Security Standard - security requirements for card payment processing"
+    },
+    {
+        "id": 59,
+        "front": "What does FISMA stand for?",
+        "back": "Federal Information Security Management Act - federal information systems security framework"
+    },
+    {
+        "id": 60,
+        "front": "What does FedRAMP stand for?",
+        "back": "Federal Risk and Authorization Management Program - cloud services security certification for government"
+    },
+    {
+        "id": 61,
+        "front": "What is the actual construction cost of Crusoe's Abilene Phase 1 facility?",
+        "back": "$584 million for Phase 1 base construction (two buildings, ~967,000 sq ft)"
+    },
+    {
+        "id": 62,
+        "front": "How many GPUs can Crusoe house per building in Abilene?",
+        "back": "Up to 100,000 GPUs per building"
+    },
+    {
+        "id": 63,
+        "front": "What is Crusoe's Water Usage Effectiveness (WUE) with their closed loop system?",
+        "back": "Near zero water usage with zero-water evaporation closed-loop system"
+    },
+    {
+        "id": 64,
+        "front": "What is Crusoe's current cluster uptime percentage?",
+        "back": "99.98% cluster uptime (\"Gold Standard\" rating)"
+    },
+    {
+        "id": 65,
+        "front": "What cost savings does Crusoe achieve with their energy-first approach?",
+        "back": "Up to 30% cost savings below market rates through direct clean energy sourcing"
+    },
+    {
+        "id": 66,
+        "front": "What is the total capacity of Crusoe's Abilene facility when fully built out?",
+        "back": "1.2 GW capacity across 8 buildings when fully built out"
+    },
+    {
+        "id": 67,
+        "front": "What are Crusoe's three primary business segments?",
+        "back": "DFM (Digital Flare Mitigation), DRO (Digital Renewable Optimization), and Crusoe Cloud"
+    },
+    {
+        "id": 68,
+        "front": "How does Crusoe's closed loop cooling system eliminate water loss?",
+        "back": "Proprietary direct-to-chip liquid cooling circulates coolant directly to GPUs eliminating evaporation"
+    },
+    {
+        "id": 69,
+        "front": "What is the typical power density range for AI training workloads?",
+        "back": "60-120kW+ per rack (compared to 5-10kW for traditional)"
+    },
+    {
+        "id": 70,
+        "front": "What power density projections are expected by 2028-2030?",
+        "back": "200-250kW per rack by 2028-2030"
+    },
+    {
+        "id": 71,
+        "front": "How much more efficient is 3-phase power compared to single-phase?",
+        "back": "1.7x more efficient power transmission and better load balancing"
+    },
+    {
+        "id": 72,
+        "front": "What voltage systems are commonly used in AI data centers?",
+        "back": "480V, 600V, and medium voltage systems for high power densities"
+    },
+    {
+        "id": 73,
+        "front": "What is the emerging power architecture to replace 12V systems?",
+        "back": "48V power architecture for 25% energy loss reduction"
+    },
+    {
+        "id": 74,
+        "front": "What are typical lead times for major electrical equipment?",
+        "back": "12-18 months for transformers, switchgear, and major electrical components"
+    },
+    {
+        "id": 75,
+        "front": "What is N+1 redundancy in power systems?",
+        "back": "One spare/backup component for the entire system (if one fails, backup takes over)"
+    },
+    {
+        "id": 76,
+        "front": "What is 2N redundancy in power systems?",
+        "back": "Fully duplicated systems with two independent power paths"
+    },
+    {
+        "id": 77,
+        "front": "What are typical rack PDU circuit ratings for AI equipment?",
+        "back": "20-60A circuits for rack-level power distribution"
+    },
+    {
+        "id": 78,
+        "front": "What is the capacity range for floor PDUs in AI data centers?",
+        "back": "500-2500kVA capacity for floor-mounted power distribution"
+    },
+    {
+        "id": 79,
+        "front": "What is the minimum generator fuel capacity requirement?",
+        "back": "24-72 hours minimum fuel capacity with paralleling capability"
+    },
+    {
+        "id": 80,
+        "front": "What UPS battery backup duration is typical during generator startup?",
+        "back": "5-10 minutes during generator startup sequence"
+    },
+    {
+        "id": 81,
+        "front": "What medium voltage levels are typical for AI data center utility feeds?",
+        "back": "13.2kV, 13.8kV, or 27.6kV requiring dedicated substations"
+    },
+    {
+        "id": 82,
+        "front": "What is the cost range for substations serving facilities exceeding 10MW?",
+        "back": "$3-7 million for substations serving facilities exceeding 10MW"
+    },
+    {
+        "id": 83,
+        "front": "What percentage of traditional data center space can support AI power densities?",
+        "back": "25% of traditional space due to power infrastructure constraints"
+    },
+    {
+        "id": 84,
+        "front": "What percentage of heat load can direct-to-chip cooling remove?",
+        "back": "70-75% of heat load through liquid cooling plates"
+    },
+    {
+        "id": 85,
+        "front": "What are the two types of immersion cooling?",
+        "back": "Single-phase (non-boiling) and dual-phase (boiling) immersion cooling"
+    },
+    {
+        "id": 86,
+        "front": "What power densities can immersion cooling support?",
+        "back": "100-150kW+ per rack for highest density applications"
+    },
+    {
+        "id": 87,
+        "front": "What chilled water supply temperatures are typical for AI data centers?",
+        "back": "45-55°F supply temperatures for enhanced heat removal"
+    },
+    {
+        "id": 88,
+        "front": "What ASHRAE operating temperature range applies to data centers?",
+        "back": "18-27°C (64-81°F) with 45-55% humidity per ASHRAE guidelines"
+    },
+    {
+        "id": 89,
+        "front": "What is the industry average PUE and what do leading operators achieve?",
+        "back": "Industry average 1.56, leading operators achieve 1.09-1.10"
+    },
+    {
+        "id": 90,
+        "front": "At what power density do traditional CRAC units become inadequate?",
+        "back": "Beyond 20-30kW per rack require liquid cooling supplementation"
+    },
+    {
+        "id": 91,
+        "front": "What CFM capacity range do Computer Room Air Handlers provide?",
+        "back": "1,000-5,000 CFM capacity with hot/cold aisle containment"
+    },
+    {
+        "id": 92,
+        "front": "What is the purpose of hot/cold aisle containment?",
+        "back": "Prevents hot and cold air mixing, improving cooling efficiency"
+    },
+    {
+        "id": 93,
+        "front": "What cooling approach handles the highest power densities?",
+        "back": "Immersion cooling supports the highest power densities (150kW+)"
+    },
+    {
+        "id": 94,
+        "front": "What is the current percentage of data centers with liquid cooling installed?",
+        "back": "22% of data centers have already installed liquid cooling"
+    },
+    {
+        "id": 95,
+        "front": "What is Microsoft's target WUE by 2030?",
+        "back": "0.3 L/kWh by 2030 for water usage effectiveness"
+    },
+    {
+        "id": 96,
+        "front": "What structural modifications are needed for AI retrofits?",
+        "back": "Increase floor loading capacity and vertical clearance to 8-9 meters"
+    },
+    {
+        "id": 97,
+        "front": "What floor loading capacity increase is required for AI equipment?",
+        "back": "From 3-5 KN/m² to 10-15 KN/m² for heavy AI equipment"
+    },
+    {
+        "id": 98,
+        "front": "What vertical clearance is needed for AI data centers?",
+        "back": "8-9 meters for proper airflow and equipment access"
+    },
+    {
+        "id": 99,
+        "front": "What does VESDA detect and when?",
+        "back": "VESDA detects microscopic particles before visible smoke formation"
+    },
+    {
+        "id": 100,
+        "front": "What clean agents are used for equipment fire protection?",
+        "back": "FM-200 and NOVEC 1230 for clean agent equipment protection"
+    },
+    {
+        "id": 101,
+        "front": "How do pre-action sprinkler systems work?",
+        "back": "Double-interlock protection requiring both detector activation and sprinkler activation"
+    },
+    {
+        "id": 102,
+        "front": "What enhanced plumbing features are critical for liquid cooling?",
+        "back": "Comprehensive leak detection throughout cooling loops and emergency shutoffs"
+    },
+    {
+        "id": 103,
+        "front": "What are the six levels of data center commissioning?",
+        "back": "Factory testing, installation verification, system integration testing, performance validation, documentation, training"
+    },
+    {
+        "id": 104,
+        "front": "What is the commissioning process purpose?",
+        "back": "Performance verification and documentation that all systems perform according to design"
+    },
+    {
+        "id": 105,
+        "front": "What percentage of AI data center retrofit cost do electrical systems represent?",
+        "back": "40-45% of total retrofit cost ($280-460 per square foot)"
+    },
+    {
+        "id": 106,
+        "front": "What is the total retrofit cost range per gross square foot?",
+        "back": "$520-900 per gross square foot for complete AI retrofit"
+    },
+    {
+        "id": 107,
+        "front": "What percentage of AI data centers use design-build delivery?",
+        "back": "70-80% of AI data centers use design-build delivery"
+    },
+    {
+        "id": 108,
+        "front": "How does design-build compress traditional schedules?",
+        "back": "From traditional 24-36 months to 12-18 months"
+    },
+    {
+        "id": 109,
+        "front": "How does a GMP contract structure work?",
+        "back": "Owner pays actual costs plus contractor fee, cost overruns are contractor's responsibility"
+    },
+    {
+        "id": 110,
+        "front": "What are the main benefits of GMP contracts for AI projects?",
+        "back": "Cost certainty, transparency, early contractor involvement, potential savings sharing"
+    },
+    {
+        "id": 111,
+        "front": "What does CMAR stand for and how does it work?",
+        "back": "Construction Manager At Risk - early construction input while maintaining owner design control"
+    },
+    {
+        "id": 112,
+        "front": "Why do AI projects require higher contingencies?",
+        "back": "Technology evolution, equipment changes, uncertain requirements, rapid innovation"
+    },
+    {
+        "id": 113,
+        "front": "What contingency percentage is typical for AI data center projects?",
+        "back": "10-15% of project budget for technology adaptations"
+    },
+    {
+        "id": 114,
+        "front": "What contract type provides maximum flexibility for evolving requirements?",
+        "back": "Cost Plus contracts provide maximum flexibility for scope changes"
+    },
+    {
+        "id": 115,
+        "front": "Which hyperscaler has the largest 2025 AI infrastructure investment?",
+        "back": "Amazon Web Services with over $100 billion over the next decade"
+    },
+    {
+        "id": 116,
+        "front": "What is CoreWeave's total funding and GPU count?",
+        "back": "$12.7 billion in total funding, operating 45,000+ GPUs"
+    },
+    {
+        "id": 117,
+        "front": "How does Lambda Labs' H100 pricing compare to AWS?",
+        "back": "$2.49/hour vs AWS's $12+/hour for H100 GPUs"
+    },
+    {
+        "id": 118,
+        "front": "What is Meta's 2025 investment amount and Louisiana facility scale?",
+        "back": "$60-65 billion in 2025, Louisiana facility housing 1.3 million GPUs"
+    },
+    {
+        "id": 119,
+        "front": "Which contractors are building Meta's $10B Louisiana data center?",
+        "back": "Turner Construction, DPR Construction, and Mortenson"
+    },
+    {
+        "id": 120,
+        "front": "What makes DPR Construction notable for AI data centers?",
+        "back": "Advanced Virtual Design and Construction (VDC) capabilities and technology integration"
+    },
+    {
+        "id": 121,
+        "front": "What is Digital Realty's AI strategy and partnership?",
+        "back": "$7 billion joint venture with Blackstone for AI-ready data centers"
+    },
+    {
+        "id": 122,
+        "front": "What power density does CyrusOne's Intelliscale support?",
+        "back": "Up to 300kW per rack with Intelliscale AI services"
+    },
+    {
+        "id": 123,
+        "front": "What are the main components in a typical AI data center single line diagram?",
+        "back": "Utility feed → Transformers → Switchgear → UPS → PDUs → Rack PDUs"
+    },
+    {
+        "id": 124,
+        "front": "What is the purpose of transformers in data center electrical systems?",
+        "back": "Convert utility voltage to appropriate levels for data center equipment"
+    },
+    {
+        "id": 125,
+        "front": "What network bandwidth does InfiniBand provide for AI clusters?",
+        "back": "Up to 200 Gbps per port for low-latency AI cluster communication"
+    },
+    {
+        "id": 126,
+        "front": "What is the current standard for AI backend networking?",
+        "back": "400 Gigabit Ethernet (400GbE) for AI backend networking"
+    },
+    {
+        "id": 127,
+        "front": "What network standard is expected to dominate by 2025?",
+        "back": "800 Gigabit Ethernet (800GbE) expected to dominate by 2025"
+    },
+    {
+        "id": 128,
+        "front": "What makes InfiniBand preferred for AI training clusters?",
+        "back": "Low-latency, high-bandwidth characteristics essential for AI training workloads"
+    },
+    {
+        "id": 129,
+        "front": "How do switchgear components function in a data center SLD?",
+        "back": "Control and protect electrical circuits, enable maintenance isolation and safety"
+    },
+    {
+        "id": 130,
+        "front": "What is Ultra Ethernet and why is it important for AI?",
+        "back": "Combines traditional Ethernet with InfiniBand-like features optimized for AI workloads"
+    },
+    {
+        "id": 131,
+        "front": "What does CPM stand for in construction scheduling?",
+        "back": "Critical Path Method - scheduling technique that identifies the longest sequence of dependent activities"
+    },
+    {
+        "id": 132,
+        "front": "What is the critical path in a construction schedule?",
+        "back": "The longest sequence of activities that determines the minimum project duration"
+    },
+    {
+        "id": 133,
+        "front": "What is float or slack in project scheduling?",
+        "back": "Amount of time an activity can be delayed without delaying the project completion"
+    },
+    {
+        "id": 134,
+        "front": "What is the difference between total float and free float?",
+        "back": "Total float affects project completion, free float only affects successor activities"
+    },
+    {
+        "id": 135,
+        "front": "What is fast tracking in schedule compression?",
+        "back": "Overlapping activities that were originally planned in sequence to compress schedule"
+    },
+    {
+        "id": 136,
+        "front": "What is crashing in schedule compression?",
+        "back": "Adding resources to critical path activities to reduce their duration"
+    },
+    {
+        "id": 137,
+        "front": "What are the key components of a Gantt chart?",
+        "back": "Tasks, durations, dependencies, resources, timeline, milestones, and progress tracking"
+    },
+    {
+        "id": 138,
+        "front": "What is resource leveling in project scheduling?",
+        "back": "Smoothing resource demand to avoid over-allocation while maintaining critical path"
+    },
+    {
+        "id": 139,
+        "front": "What is the difference between lag and lead time?",
+        "back": "Lag adds delay between activities, lead allows successor to start before predecessor finishes"
+    },
+    {
+        "id": 140,
+        "front": "What are the four types of task dependencies?",
+        "back": "Finish-to-Start (FS), Start-to-Start (SS), Finish-to-Finish (FF), Start-to-Finish (SF)"
+    },
+    {
+        "id": 141,
+        "front": "What is a milestone in project scheduling?",
+        "back": "Significant project event or deliverable with zero duration marking key completion points"
+    },
+    {
+        "id": 142,
+        "front": "What is the difference between duration and work in scheduling?",
+        "back": "Duration is elapsed time, work is effort hours required to complete the task"
+    },
+    {
+        "id": 143,
+        "front": "What is baseline schedule and why is it important?",
+        "back": "Original approved schedule used for performance measurement and change control"
+    },
+    {
+        "id": 144,
+        "front": "What are common schedule risks in data center construction?",
+        "back": "Long-lead equipment procurement, utility delays, weather, permit approvals, design changes"
+    },
+    {
+        "id": 145,
+        "front": "How do you calculate schedule variance (SV)?",
+        "back": "SV = Earned Value (EV) - Planned Value (PV)"
+    },
+    {
+        "id": 146,
+        "front": "What are the five phases of project management lifecycle?",
+        "back": "Initiation, Planning, Execution, Monitoring & Controlling, Closeout"
+    },
+    {
+        "id": 147,
+        "front": "What is the project management triangle (triple constraint)?",
+        "back": "Scope, Time, and Cost - changing one affects the others"
+    },
+    {
+        "id": 148,
+        "front": "What does EVM stand for and what does it measure?",
+        "back": "Earned Value Management - measures project performance against scope, schedule, and cost"
+    },
+    {
+        "id": 149,
+        "front": "What is the difference between proactive and reactive risk management?",
+        "back": "Proactive identifies and prevents risks, reactive responds after risks occur"
+    },
+    {
+        "id": 150,
+        "front": "What are the key elements of a project charter?",
+        "back": "Project authorization, objectives, scope, stakeholders, success criteria, constraints"
+    },
+    {
+        "id": 151,
+        "front": "What is the difference between quality assurance and quality control?",
+        "back": "QA prevents defects through process, QC detects defects through inspection"
+    },
+    {
+        "id": 152,
+        "front": "What is a work breakdown structure (WBS)?",
+        "back": "Hierarchical breakdown of project deliverables and work packages"
+    },
+    {
+        "id": 153,
+        "front": "What is the purpose of a project kickoff meeting?",
+        "back": "Align team on objectives, scope, roles, communication, and project approach"
+    },
+    {
+        "id": 154,
+        "front": "What are the key components of project communication management?",
+        "back": "Stakeholder identification, communication planning, information distribution, reporting"
+    },
+    {
+        "id": 155,
+        "front": "What is change control process in construction projects?",
+        "back": "Formal procedure for requesting, evaluating, approving, and implementing changes"
+    },
+    {
+        "id": 156,
+        "front": "What is the difference between functional and matrix organization structures?",
+        "back": "Functional has clear hierarchy, matrix has dual reporting relationships"
+    },
+    {
+        "id": 157,
+        "front": "What are the key elements of project closeout?",
+        "back": "Final deliverables, documentation, lessons learned, contract closure, team release"
+    },
+    {
+        "id": 158,
+        "front": "What is value engineering and when is it most effective?",
+        "back": "Systematic review to optimize cost, function, and quality - most effective in design phase"
+    },
+    {
+        "id": 159,
+        "front": "What are the key performance indicators (KPIs) for construction projects?",
+        "back": "Schedule performance, cost performance, quality metrics, safety indicators, stakeholder satisfaction"
+    },
+    {
+        "id": 160,
+        "front": "What is the difference between scope creep and scope change?",
+        "back": "Scope creep is uncontrolled expansion, scope change is formal approved modification"
+    }
+] 
