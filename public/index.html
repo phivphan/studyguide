@@ -35,13 +35,21 @@
                 </svg>
             </button>
             <div class="counter" id="flashcard-counter">1 of 8</div>
-            <button class="complete-btn" onclick="markComplete()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <g class="oi-check">
-                        <path class="oi-vector" d="M4 12L9.33333 18L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </g>
-                </svg>
-            </button>
+            <div class="header-actions">
+                <button class="edit-btn" onclick="toggleEditMode()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.5 2.50023C18.8978 2.1024 19.4374 1.87891 20 1.87891C20.5626 1.87891 21.1022 2.1024 21.5 2.50023C21.8978 2.89805 22.1213 3.43762 22.1213 4.00023C22.1213 4.56284 21.8978 5.1024 21.5 5.50023L12 15.0002L8 16.0002L9 12.0002L18.5 2.50023Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="complete-btn" onclick="markComplete()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g class="oi-check">
+                            <path class="oi-vector" d="M4 12L9.33333 18L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg>
+                </button>
+            </div>
         </div>
         <div class="flashcard-container">
             <div class="flashcard" onclick="flipCard()">
@@ -57,6 +65,10 @@
             <button class="nav-btn prev-btn" onclick="previousCard()">Previous</button>
             <button class="nav-btn next-btn" onclick="nextCard()">Next</button>
         </div>
+        <div class="edit-controls">
+            <button class="edit-control-btn cancel" onclick="cancelEdit()">Cancel</button>
+            <button class="edit-control-btn save" onclick="saveEdit()">Save</button>
+        </div>
     </div>
 
     <!-- Multiple Choice Screen -->
@@ -71,13 +83,21 @@
                 </svg>
             </button>
             <div class="counter" id="mc-counter">1 of 8</div>
-            <button class="complete-btn" onclick="markComplete()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <g class="oi-check">
-                        <path class="oi-vector" d="M4 12L9.33333 18L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </g>
-                </svg>
-            </button>
+            <div class="header-actions">
+                <button class="edit-btn" onclick="toggleEditMode()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.5 2.50023C18.8978 2.1024 19.4374 1.87891 20 1.87891C20.5626 1.87891 21.1022 2.1024 21.5 2.50023C21.8978 2.89805 22.1213 3.43762 22.1213 4.00023C22.1213 4.56284 21.8978 5.1024 21.5 5.50023L12 15.0002L8 16.0002L9 12.0002L18.5 2.50023Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="complete-btn" onclick="markComplete()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g class="oi-check">
+                            <path class="oi-vector" d="M4 12L9.33333 18L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg>
+                </button>
+            </div>
         </div>
         <div class="container">
             <div class="mc-question-container">
@@ -90,6 +110,10 @@
         <div class="mc-controls">
             <button class="nav-btn prev-btn" onclick="previousMultipleChoice()">Previous</button>
             <button class="nav-btn next-btn" onclick="nextMultipleChoice()">Next</button>
+        </div>
+        <div class="edit-controls">
+            <button class="edit-control-btn cancel" onclick="cancelEdit()">Cancel</button>
+            <button class="edit-control-btn save" onclick="saveEdit()">Save</button>
         </div>
     </div>
 
@@ -105,13 +129,21 @@
                 </svg>
             </button>
             <div class="counter" id="lf-counter">1 of 1</div>
-            <button class="complete-btn" onclick="markComplete()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <g class="oi-check">
-                        <path class="oi-vector" d="M4 12L9.33333 18L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </g>
-                </svg>
-            </button>
+            <div class="header-actions">
+                <button class="edit-btn" onclick="toggleEditMode()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.5 2.50023C18.8978 2.1024 19.4374 1.87891 20 1.87891C20.5626 1.87891 21.1022 2.1024 21.5 2.50023C21.8978 2.89805 22.1213 3.43762 22.1213 4.00023C22.1213 4.56284 21.8978 5.1024 21.5 5.50023L12 15.0002L8 16.0002L9 12.0002L18.5 2.50023Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="complete-btn" onclick="markComplete()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g class="oi-check">
+                            <path class="oi-vector" d="M4 12L9.33333 18L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg>
+                </button>
+            </div>
         </div>
         <div class="container">
             <div class="long-form-question-container">
@@ -127,6 +159,10 @@
         <div class="long-form-controls">
             <button class="nav-btn prev-btn" onclick="previousLongForm()">Previous</button>
             <button class="nav-btn next-btn" onclick="nextLongForm()">Next</button>
+        </div>
+        <div class="edit-controls">
+            <button class="edit-control-btn cancel" onclick="cancelEdit()">Cancel</button>
+            <button class="edit-control-btn save" onclick="saveEdit()">Save</button>
         </div>
     </div>
 

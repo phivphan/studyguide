@@ -12,6 +12,9 @@ let availableCards = [];
 let completedCards = new Set();
 let isFlipped = false;
 let isAnswerShown = false;
+let isEditMode = false;
+let originalContent = {};
+let editCache = {};
 
 // Utility functions
 function generateBucketId() {
@@ -31,6 +34,7 @@ function getCurrentTimestamp() {
 document.addEventListener('DOMContentLoaded', async () => {
     await loadBuckets();
     loadProgress();
+    loadEditCache();
     
     // Migrate any legacy progress data to new bucket IDs
     migrateLegacyProgress();
@@ -46,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         await loadBucketData(currentBucket);
         startStudy(modeParam, filterParam);
     } else {
-        showScreen('home');
+    showScreen('home');
         renderBuckets();
     }
 });
@@ -71,7 +75,7 @@ async function loadBucketData(bucketId) {
     try {
         const flashcardResponse = await fetch(`${bucketId}/flashcards.json`);
         if (flashcardResponse.ok) {
-            flashcards = await flashcardResponse.json();
+        flashcards = await flashcardResponse.json();
         } else {
             flashcards = [];
         }
@@ -239,6 +243,9 @@ function startStudy(mode, filter) {
     currentMode = mode;
     currentFilter = filter;
     
+    // Apply any cached edits
+    applyEditCache();
+    
     if (mode === 'flashcards') {
         prepareFlashcards();
         showScreen('flashcard');
@@ -340,8 +347,8 @@ function displayCurrentFlashcard() {
     }
     
     const card = availableCards[currentCardIndex];
-    document.getElementById('flashcard-question').textContent = card.question;
-    document.getElementById('flashcard-answer').textContent = card.answer;
+    document.getElementById('flashcard-question').textContent = card.front;
+    document.getElementById('flashcard-answer').textContent = card.back;
     document.getElementById('flashcard-counter').textContent = `${currentCardIndex + 1} of ${availableCards.length}`;
     
     // Reset flip state
@@ -461,7 +468,7 @@ function showAnswer() {
 }
 
 function nextLongForm() {
-    currentCardIndex = (currentCardIndex + 1) % availableCards.length;
+        currentCardIndex = (currentCardIndex + 1) % availableCards.length;
     displayCurrentLongForm();
 }
 
@@ -486,7 +493,7 @@ function markComplete() {
     }
     
     completedCards.add(cardKey);
-    saveProgress();
+        saveProgress();
     
     // Remove from available cards if in active mode
     if (currentFilter === 'active') {
@@ -562,6 +569,240 @@ async function deleteBucket(bucketId) {
     
     console.log('Bucket would be deleted:', bucketId);
 }
+
+// Edit Mode Functions
+function toggleEditMode() {
+    if (isEditMode) {
+        cancelEdit();
+    } else {
+        enterEditMode();
+    }
+}
+
+function enterEditMode() {
+    isEditMode = true;
+    document.body.classList.add('edit-mode');
+    
+    // Store original content for cancel functionality
+    if (currentMode === 'flashcards') {
+        const card = availableCards[currentCardIndex];
+        originalContent = {
+            front: card.front,
+            back: card.back
+        };
+        makeFlashcardEditable();
+    } else if (currentMode === 'multiple-choice') {
+        const question = availableCards[currentCardIndex];
+        originalContent = {
+            question: question.question,
+            options: [...question.options],
+            correct: question.correct,
+            explanation: question.explanation || ''
+        };
+        makeMultipleChoiceEditable();
+    } else if (currentMode === 'long-form') {
+        const question = availableCards[currentCardIndex];
+        originalContent = {
+            question: question.question,
+            answer: question.answer
+        };
+        makeLongFormEditable();
+    }
+}
+
+function exitEditMode() {
+    isEditMode = false;
+    document.body.classList.remove('edit-mode');
+    originalContent = {};
+}
+
+function cancelEdit() {
+    // Restore original content
+    if (currentMode === 'flashcards') {
+        const card = availableCards[currentCardIndex];
+        card.front = originalContent.front;
+        card.back = originalContent.back;
+        displayCurrentFlashcard();
+    } else if (currentMode === 'multiple-choice') {
+        const question = availableCards[currentCardIndex];
+        question.question = originalContent.question;
+        question.options = [...originalContent.options];
+        question.correct = originalContent.correct;
+        question.explanation = originalContent.explanation;
+        displayCurrentQuestion();
+    } else if (currentMode === 'long-form') {
+        const question = availableCards[currentCardIndex];
+        question.question = originalContent.question;
+        question.answer = originalContent.answer;
+        displayCurrentLongForm();
+    }
+    
+    exitEditMode();
+}
+
+function saveEdit() {
+    // Get edited content and update the data
+    if (currentMode === 'flashcards') {
+        saveFlashcardEdit();
+    } else if (currentMode === 'multiple-choice') {
+        saveMultipleChoiceEdit();
+    } else if (currentMode === 'long-form') {
+        saveLongFormEdit();
+    }
+    
+    // Save to localStorage cache
+    saveEditCache();
+    exitEditMode();
+}
+
+function makeFlashcardEditable() {
+    const questionEl = document.getElementById('flashcard-question');
+    const answerEl = document.getElementById('flashcard-answer');
+    
+    questionEl.innerHTML = `<div class="editable-field"><textarea>${questionEl.textContent}</textarea></div>`;
+    answerEl.innerHTML = `<div class="editable-field"><textarea>${answerEl.textContent}</textarea></div>`;
+}
+
+function makeMultipleChoiceEditable() {
+    const questionEl = document.getElementById('mc-question');
+    const question = availableCards[currentCardIndex];
+    
+    questionEl.innerHTML = `<div class="editable-field"><textarea>${questionEl.textContent}</textarea></div>`;
+    
+    const optionsContainer = document.getElementById('mc-options');
+    optionsContainer.innerHTML = '';
+    
+    question.options.forEach((option, index) => {
+        const optionDiv = document.createElement('div');
+        optionDiv.innerHTML = `
+            <div class="editable-field" style="margin-bottom: var(--spacing-sm);">
+                <label>
+                    <input type="radio" name="correct-option" value="${index}" ${index === question.correct ? 'checked' : ''}>
+                    Option ${index + 1}:
+                </label>
+                <textarea>${option}</textarea>
+            </div>
+        `;
+        optionsContainer.appendChild(optionDiv);
+    });
+    
+    // Add explanation field
+    const explanationDiv = document.createElement('div');
+    explanationDiv.innerHTML = `
+        <div class="editable-field">
+            <label>Explanation (optional):</label>
+            <textarea>${question.explanation || ''}</textarea>
+        </div>
+    `;
+    optionsContainer.appendChild(explanationDiv);
+}
+
+function makeLongFormEditable() {
+    const questionEl = document.getElementById('lf-question');
+    const answerEl = document.getElementById('lf-answer-text');
+    
+    questionEl.innerHTML = `<div class="editable-field"><textarea>${questionEl.textContent}</textarea></div>`;
+    
+    // Show answer if hidden and make it editable
+    document.getElementById('lf-answer').style.display = 'block';
+    document.getElementById('show-answer-btn').style.display = 'none';
+    answerEl.innerHTML = `<div class="editable-field"><textarea>${answerEl.textContent}</textarea></div>`;
+}
+
+function saveFlashcardEdit() {
+    const card = availableCards[currentCardIndex];
+    const questionTextarea = document.querySelector('#flashcard-question textarea');
+    const answerTextarea = document.querySelector('#flashcard-answer textarea');
+    
+    card.front = questionTextarea.value.trim();
+    card.back = answerTextarea.value.trim();
+    
+    displayCurrentFlashcard();
+}
+
+function saveMultipleChoiceEdit() {
+    const question = availableCards[currentCardIndex];
+    const questionTextarea = document.querySelector('#mc-question textarea');
+    const optionTextareas = document.querySelectorAll('#mc-options textarea');
+    const correctRadio = document.querySelector('input[name="correct-option"]:checked');
+    
+    question.question = questionTextarea.value.trim();
+    question.options = Array.from(optionTextareas).slice(0, -1).map(textarea => textarea.value.trim());
+    question.correct = parseInt(correctRadio.value);
+    question.explanation = optionTextareas[optionTextareas.length - 1].value.trim();
+    
+    displayCurrentQuestion();
+}
+
+function saveLongFormEdit() {
+    const question = availableCards[currentCardIndex];
+    const questionTextarea = document.querySelector('#lf-question textarea');
+    const answerTextarea = document.querySelector('#lf-answer-text textarea');
+    
+    question.question = questionTextarea.value.trim();
+    question.answer = answerTextarea.value.trim();
+    
+    displayCurrentLongForm();
+}
+
+function saveEditCache() {
+    // Cache edited content to localStorage
+    const cacheKey = `editCache_${currentBucket}_${currentMode}`;
+    if (!editCache[cacheKey]) {
+        editCache[cacheKey] = {};
+    }
+    
+    const currentItem = availableCards[currentCardIndex];
+    editCache[cacheKey][currentItem.id] = { ...currentItem };
+    
+    localStorage.setItem('studyEditCache', JSON.stringify(editCache));
+}
+
+function loadEditCache() {
+    const cached = localStorage.getItem('studyEditCache');
+    if (cached) {
+        editCache = JSON.parse(cached);
+    }
+}
+
+function applyEditCache() {
+    const cacheKey = `editCache_${currentBucket}_${currentMode}`;
+    if (editCache[cacheKey]) {
+        // Apply cached edits to current data
+        if (currentMode === 'flashcards') {
+            flashcards.forEach(card => {
+                if (editCache[cacheKey][card.id]) {
+                    Object.assign(card, editCache[cacheKey][card.id]);
+                }
+            });
+        } else if (currentMode === 'multiple-choice') {
+            multipleChoice.forEach(question => {
+                if (editCache[cacheKey][question.id]) {
+                    Object.assign(question, editCache[cacheKey][question.id]);
+                }
+            });
+        } else if (currentMode === 'long-form') {
+            longForm.forEach(question => {
+                if (editCache[cacheKey][question.id]) {
+                    Object.assign(question, editCache[cacheKey][question.id]);
+                }
+            });
+                 }
+     }
+ }
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+    if (isEditMode) {
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            cancelEdit();
+        } else if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+            saveEdit();
+        }
+    }
+});
 
 // Migration utility (for converting old progress data to new bucket IDs)
 function migrateLegacyProgress() {

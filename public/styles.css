@@ -95,7 +95,7 @@ p {
     height: 80px;
 }
 
-.home-btn, .complete-btn {
+.home-btn, .complete-btn, .edit-btn {
     background: none;
     border: none;
     font-size: var(--font-size-large);
@@ -105,12 +105,103 @@ p {
     transition: background-color 0.2s ease;
 }
 
-.home-btn:hover, .complete-btn:hover {
+.home-btn:hover, .complete-btn:hover, .edit-btn:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
 .complete-btn {
     color: var(--accent-color);
+}
+
+.edit-btn {
+    color: var(--text-secondary);
+}
+
+.header-actions {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+/* Edit Mode Styles */
+.edit-mode .header {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.edit-mode .header-actions {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.editable-field {
+    border: 2px dashed var(--accent-color);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-sm);
+    background-color: rgba(0, 123, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.editable-field textarea {
+    width: 100%;
+    min-height: 100px;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    resize: vertical;
+    outline: none;
+}
+
+.edit-controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-primary);
+    border-top: 1px solid var(--border-medium);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    padding-bottom: calc(var(--spacing-sm) + env(safe-area-inset-bottom));
+    display: none;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.edit-mode .edit-controls {
+    display: flex;
+}
+
+.edit-mode .flashcard-controls,
+.edit-mode .mc-controls,
+.edit-mode .long-form-controls {
+    display: none;
+}
+
+.edit-control-btn {
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 100px;
+}
+
+.edit-control-btn.cancel {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-dark);
+}
+
+.edit-control-btn.save {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.edit-control-btn:hover {
+    transform: scale(1.05);
 }
 
 /* SVG Icon Styling */
@@ -479,6 +570,10 @@ p {
     background-color: var(--background-secondary);
     color: var(--secondary-color);
     border-radius: var(--radius-md);
+}
+
+.long-form-answer .editable-field textarea {
+    color: var(--secondary-color);
 }
 
 .long-form-controls {
