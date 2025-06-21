@@ -1,17 +1,23 @@
 [
   {
-    "id": "data-center-systems",
+    "id": "bkt_7k9m2x1p",
     "name": "Data Center Systems",
-    "description": "Power, cooling, and infrastructure systems"
+    "description": "Power, cooling, and infrastructure systems",
+    "createdAt": "2024-01-15T10:30:00Z",
+    "lastModified": "2024-01-20T14:22:00Z"
   },
   {
-    "id": "construction-management", 
+    "id": "bkt_3n8q5r2w",
     "name": "Construction Management",
-    "description": "General construction principles and practices"
+    "description": "General construction principles and practices",
+    "createdAt": "2024-01-15T10:31:00Z",
+    "lastModified": "2024-01-20T14:23:00Z"
   },
   {
-    "id": "pre-construction-management",
-    "name": "Pre-Construction Management", 
-    "description": "Planning, feasibility, and pre-construction processes"
+    "id": "bkt_9v4c7z6m",
+    "name": "Real Estate / Site Planning",
+    "description": "Planning, feasibility, and pre-construction processes",
+    "createdAt": "2024-01-15T10:32:00Z",
+    "lastModified": "2024-01-20T14:24:00Z"
   }
 ] 

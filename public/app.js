@@ -13,10 +13,27 @@ let completedCards = new Set();
 let isFlipped = false;
 let isAnswerShown = false;
 
+// Utility functions
+function generateBucketId() {
+    const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    let result = 'bkt_';
+    for (let i = 0; i < 8; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+}
+
+function getCurrentTimestamp() {
+    return new Date().toISOString();
+}
+
 // Initialize app
 document.addEventListener('DOMContentLoaded', async () => {
     await loadBuckets();
     loadProgress();
+    
+    // Migrate any legacy progress data to new bucket IDs
+    migrateLegacyProgress();
     
     // Check URL parameters
     const urlParams = new URLSearchParams(window.location.search);
@@ -504,5 +521,73 @@ function resetProgress() {
         completedCards.clear();
         saveProgress();
         alert('Progress reset successfully!');
+    }
+}
+
+// Future bucket management functions (for UI implementation)
+async function createNewBucket(name, description) {
+    const newBucket = {
+        id: generateBucketId(),
+        name: name,
+        description: description,
+        createdAt: getCurrentTimestamp(),
+        lastModified: getCurrentTimestamp()
+    };
+    
+    // TODO: Implement backend API call to:
+    // 1. Add bucket to buckets.json
+    // 2. Create bucket directory structure
+    // 3. Initialize empty JSON files
+    
+    console.log('New bucket would be created:', newBucket);
+    return newBucket;
+}
+
+async function updateBucket(bucketId, updates) {
+    // TODO: Implement backend API call to update bucket metadata
+    const updateData = {
+        ...updates,
+        lastModified: getCurrentTimestamp()
+    };
+    
+    console.log('Bucket would be updated:', bucketId, updateData);
+    return updateData;
+}
+
+async function deleteBucket(bucketId) {
+    // TODO: Implement backend API call to:
+    // 1. Remove bucket from buckets.json
+    // 2. Delete bucket directory and contents
+    // 3. Clean up progress data
+    
+    console.log('Bucket would be deleted:', bucketId);
+}
+
+// Migration utility (for converting old progress data to new bucket IDs)
+function migrateLegacyProgress() {
+    const legacyMapping = {
+        'data-center-systems': 'bkt_7k9m2x1p',
+        'construction-management': 'bkt_3n8q5r2w',
+        'pre-construction-management': 'bkt_9v4c7z6m'
+    };
+    
+    const currentProgress = Array.from(completedCards);
+    let migrated = false;
+    
+    currentProgress.forEach(progressKey => {
+        // Check if this is an old-style progress key
+        Object.keys(legacyMapping).forEach(oldId => {
+            if (progressKey.startsWith(oldId + '-')) {
+                const newKey = progressKey.replace(oldId + '-', legacyMapping[oldId] + '-');
+                completedCards.delete(progressKey);
+                completedCards.add(newKey);
+                migrated = true;
+            }
+        });
+    });
+    
+    if (migrated) {
+        saveProgress();
+        console.log('Legacy progress data migrated to new bucket IDs');
     }
 } 
